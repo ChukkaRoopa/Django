@@ -1,0 +1,16 @@
+- pip install virtualenv --> create virtual environment
+- virtualenv env
+- source env/bin/activate --> activate the virtual env
+- pip install django
+- python
+> import django
+> django.__version__
+- django-admin startproject core
+  manage.py file is created
+  asgi.py file - asynchronous gateway interface
+  wsgi.py - web server gateway interface
+- python manage.py startapp home
+- python manage.py startapp accounts
+- python manage.py runserver
+- python manage.py runserver 0.0.0.0:5000 --> to run on particular port
+- logical part is written in views.py

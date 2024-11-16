@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block start %}
+
+    <a href ="/contacts/">
+        Contact
+    </a>
+    |
+    <a href ="/about/">
+        About
+    </a>
+
+    <h1>This is Index page</h1>
+    {{peoples}}
+
+    <table>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Can Vote</th>
+        </tr>
+
+        {% for people in peoples %}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{people.name}}</td>
+          <td>{{people.Age}}</td>
+          <td {% if people.Age < 18 %} style='background:red' {% endif %}>
+            {% if people.Age >= 18 %}
+            👍
+            {% else %}
+            👎
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+
+    <p>
+        {{text}}
+    </p>
+
+    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ad suscipit quia. Architecto quas hic ab possimus voluptatum! Optio rerum sunt aliquam magnam vitae maiores modi quis soluta accusamus repellendus.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ducimus, perferendis recusandae modi in, commodi quae totam, nostrum velit odit excepturi soluta nobis pariatur assumenda dolor iste ea. Aut, amet!</p>
+
+
+{% endblock %}
