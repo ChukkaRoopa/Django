@@ -14,3 +14,23 @@
 - python manage.py runserver
 - python manage.py runserver 0.0.0.0:5000 --> to run on particular port
 - logical part is written in views.py
+
+- models commands :
+- python manage.py makemigrations --> to create models --> 0001_initial.py file is created under migrations
+- python manage.py migrate --> to migrate changes to the db
+
+- shell:
+- python manage.py shell
+> from home.models import *
+
+> student = Student(name = "Roopa", age = 23, email = "roopa@gmail.com", address = "AP")
+- or
+> Student.objects.create(name = "Roopa", age = 23, email = "roopa@gmail.com", address = "AP")
+- or
+> Student_dict = {"name" : "Roopa", "age" : "23", "email" : "roopa@gmail.com", "address" : "AP"}
+> Student.objects.create(**Sudent_dict)
+
+> student.save()
+> student --> output - <Student: Student object (1)>
+> Student.objects.all() --> get the records
+> Student.objects.all[0].name --> to get the name in the record
