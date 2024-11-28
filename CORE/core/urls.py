@@ -27,7 +27,8 @@ urlpatterns = [
     path('contacts/', contacts, name = 'contacts'),
     path('about/', about, name = 'about'),
     path('receipes/', receipes, name = 'receipes'),
-    path('delete_receipe/<id>/', receipes, name = 'delete_receipe'),
+    path('delete-receipe/<id>/', delete_receipe, name = 'delete_receipe'),
+    path('update-receipe/<id>/', update_receipe, name = 'update_receipe'),
 
     path('success-page/', success_page, name = 'success_page'),
 
