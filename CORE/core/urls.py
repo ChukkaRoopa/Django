@@ -26,6 +26,10 @@ urlpatterns = [
     path('', home, name = 'home'),
     path('contacts/', contacts, name = 'contacts'),
     path('about/', about, name = 'about'),
+    path('login/', login_page, name = 'login_page'),
+    path('logout/', logout_page, name = 'logout_page'),
+    path('register/', register, name = 'register'),
+
     path('receipes/', receipes, name = 'receipes'),
     path('delete-receipe/<id>/', delete_receipe, name = 'delete_receipe'),
     path('update-receipe/<id>/', update_receipe, name = 'update_receipe'),
