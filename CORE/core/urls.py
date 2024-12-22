@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from gfg.views import *
 from home.views import *
 from vege.views import *
 from django.conf.urls.static import static
@@ -24,6 +25,12 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', home, name = 'home'),
+    path('CreateView/', CreateView),
+    path('list_view/', list_view),
+    path('detailed_view/<id>/', detailed_view),
+    path('update_view/<id>/', update_view),
+    path('delete_view/<id>/', delete_view),
+
     path('contacts/', contacts, name = 'contacts'),
     path('about/', about, name = 'about'),
     path('login/', login_page, name = 'login_page'),

@@ -20,7 +20,13 @@ def home(request):
     ]
 
     text = """
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facere corrupti dolor dicta porro iure aliquid. Fugit dolore dolores voluptates commodi sed rerum cum culpa perspiciatis, deleniti animi quibusdam, alias consequuntur. Voluptatum error, recusandae quia molestias necessitatibus sit est dolor autem omnis doloribus adipisci nam alias eius. Cumque laborum repudiandae quidem dignissimos labore adipisci ullam illum tempora iure aliquam. Animi deleniti autem harum earum. Labore, voluptate blanditiis. Soluta atque et assumenda modi totam, nisi architecto laudantium voluptatibus beatae a earum ab, sequi temporibus fugit ipsam harum tempore delectus! Nisi perspiciatis repellendus esse libero quis nemo omnis maxime doloremque rem maiores.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facere corrupti dolor dicta porro iure aliquid. Fugit 
+        dolore dolores voluptates commodi sed rerum cum culpa perspiciatis, deleniti animi quibusdam, alias consequuntur. 
+        Voluptatum error, recusandae quia molestias necessitatibus sit est dolor autem omnis doloribus adipisci nam alias eius.
+        Cumque laborum repudiandae quidem dignissimos labore adipisci ullam illum tempora iure aliquam. Animi deleniti autem harum 
+        earum. Labore, voluptate blanditiis. Soluta atque et assumenda modi totam, nisi architecto laudantium voluptatibus beatae 
+        a earum ab, sequi temporibus fugit ipsam harum tempore delectus! Nisi perspiciatis repellendus esse libero quis nemo omnis
+        maxime doloremque rem maiores.
     """
 
     for people in peoples:
@@ -29,11 +35,11 @@ def home(request):
     return render(request, "index.html", context = {'page': 'Django tutorial 2023', 'peoples':peoples, 'text':text})
 
 def about(request):
-    context = {'page':'About'}
+    context = {'page':'About page'}
     return render(request, "about.html", context)
 
 def contacts(request):
-    context = {'page':'Contacts'}
+    context = {'page':'Contacts page'}
     return render(request, "contacts.html", context)
 
 

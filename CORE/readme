@@ -34,3 +34,9 @@
 > student --> output - <Student: Student object (1)>
 > Student.objects.all() --> get the records
 > Student.objects.all[0].name --> to get the name in the record
+
+- To create a user in admin page 
+> python manage.py createsuperuser
+> username
+> email
+> password

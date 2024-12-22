@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="main">
+
+    <h1>
+        This is the Gfg page
+    </h1>
+    <title>{{ page }}</title>
+
+    {% for item in data %}
+        {{ item.title }}<br>
+        {{ item.descript }}<br>
+        {{ item.id_no }}<br>
+        {% if item.image %}
+        <img src="{{ item.image.url }}" height="100" width="100" class="d-inline-block align-top"><br>
+        {% else %}
+            <p>No image available</p>
+        {% endif %}
+        <hr>
+    {% endfor %}
+</div>
